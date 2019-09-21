@@ -63,7 +63,10 @@ public class Lexer {
                     readch(br);
                     if(peek == '*'){
                         while(!(prevpeek == '*' && peek == '/')){
-                            if(peek == (char) -1)return new Token(Tag.EOF);
+                            if(peek == (char) -1){
+                                System.out.println("-->LEXER ALLERT: \"/*\" was never closed by: \"*/\"");
+                                return new Token(Tag.EOF);
+                            }
                             readch(br);
                         }
                         readch(br);
@@ -71,7 +74,6 @@ public class Lexer {
                     }else if(peek == '/'){
                         while(peek != '\n' && peek != '\r' && peek != 13){
                             if(peek == (char) -1){
-                                System.out.println("-->LEXER ALLERT: \"/*\" was never closed by: \"*/\"");
                                 return new Token(Tag.EOF);
                             }
                             readch(br);
