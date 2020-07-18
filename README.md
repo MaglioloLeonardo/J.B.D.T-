@@ -1,5 +1,5 @@
 # J.B.D.T-
-J.B.D.T stands for: Java Bytecode Descendant Translator. 
+J.B.D.T. stands for: Java Bytecode Descendant Translator. 
 
 This piece of software written in Java is able to translate a language represented by high-level syntax into a mnemonic output that associates the Java bytecode 1: 1 instructions. It is possible to set in/out paths and run the entire program through the main class. 
 
